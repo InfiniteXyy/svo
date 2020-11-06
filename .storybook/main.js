@@ -1,4 +1,5 @@
 const sveltePreprocess = require("svelte-preprocess");
+const path = require("path");
 
 // Export a function. Accept the base config as the only param.
 module.exports = {
@@ -12,7 +13,7 @@ module.exports = {
         };
       }
     });
-    
+    config.resolve.alias["@"] = path.resolve(__dirname, "../src");
     return config;
   },
 };

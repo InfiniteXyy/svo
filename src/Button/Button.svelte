@@ -1,6 +1,4 @@
 <script lang="ts">
-  export let name;
-  export let buttonText = "Button";
   export let onClick = () => {};
 </script>
 
@@ -22,7 +20,4 @@
   }
 </style>
 
-<!-- your code here -->
-<h1>Hello {name}!</h1>
-
-<button on:click={onClick}>{buttonText}</button>
+<button on:click={onClick}><slot /></button>

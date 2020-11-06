@@ -1,1 +1,3 @@
-export { default as default } from './Component.svelte';
+export { default as Button } from "./Button";
+export { default as Carousel } from "./Carousel";
+export { default as Layout } from "./Layout";
