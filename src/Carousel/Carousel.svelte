@@ -8,11 +8,11 @@
   let curIndex = 0;
   let rightList = [];
   let leftList = [];
-  let steelIndex = 0;
+  let scrollIndex = 0;
   let isResetting = false;
 
   $: getIndex = mod(items.length);
-  $: transformX = -steelIndex * width;
+  $: transformX = -scrollIndex * width;
   $: nextRightList = [
     ...rightList,
     getIndex(rightList[rightList.length - 1] + 1),
@@ -20,21 +20,21 @@
   $: nextLeftList = [getIndex(leftList[0] - 1), ...leftList];
 
   function onNext() {
-    const isNearRightEdge = steelIndex === rightList.length - 1;
+    const isNearRightEdge = scrollIndex === rightList.length - 1;
     if (isNearRightEdge) rightList = nextRightList;
-    steelIndex++;
+    scrollIndex++;
     curIndex++;
   }
 
   function onPrev() {
-    const isNearLeftEdge = -steelIndex === leftList.length - 1;
+    const isNearLeftEdge = -scrollIndex === leftList.length - 1;
     if (isNearLeftEdge) leftList = nextLeftList;
-    steelIndex--;
+    scrollIndex--;
     curIndex--;
   }
 
   function resetBufferList() {
-    steelIndex = 0;
+    scrollIndex = 0;
     rightList = [getIndex(curIndex), getIndex(curIndex + 1)];
     leftList = [getIndex(curIndex - 1)];
     isResetting = true;
@@ -82,7 +82,7 @@
 
 <div>
   <p>current index: {curIndex}</p>
-  <p>steel index: {steelIndex}</p>
+  <p>steel index: {scrollIndex}</p>
   <p>buffer array: {JSON.stringify(rightList)}</p>
   <p>prev buffer array: {JSON.stringify(leftList)}</p>
 
