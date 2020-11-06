@@ -1,9 +1,5 @@
-0.1.0 / 2020-04-04
-==================
+# 0.1.0 / 2020-11-6
 
-# Provide svelte component library template
+# Bootstrap library structure
 
-* Basic Component.svelte
-* Testing using svelte-testing-library + Jest
-* Storybook
-* Rollup
+- Basic Button.svelte

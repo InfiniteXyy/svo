@@ -2,11 +2,11 @@ MIT License
 
 NOTICE:
 =======
-svelte-component-library-template is based on sveltejs/component-template:
-https://github.com/sveltejs/component-template
-That was originally created by Rich Harris.
+svo is based on svelte-component-library-template:
+https://github.com/nirmaoz/svelte-component-library-template
+That was originally created by Nir Maoz
 
-svelte-component-library-template is Copyright (c) 2020 Nir Maoz
+svo is Copyright (c) 2020 Yiyang Xu
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
