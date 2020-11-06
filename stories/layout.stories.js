@@ -1,5 +1,5 @@
 import { action } from "@storybook/addon-actions";
-import { Layout } from "../src/index";
+import { Layout } from "svo";
 
 export default {
   title: "Layout/Layout",

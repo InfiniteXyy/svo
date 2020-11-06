@@ -13,7 +13,7 @@ module.exports = {
         };
       }
     });
-    config.resolve.alias["@"] = path.resolve(__dirname, "../src");
+    config.resolve.alias["svo"] = path.resolve(__dirname, "../src");
     return config;
   },
 };

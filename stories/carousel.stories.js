@@ -1,5 +1,6 @@
 import { action } from "@storybook/addon-actions";
-import { Carousel } from "../src/index";
+import { Carousel } from "svo";
+import CarouselExample from "svo/Carousel/Carousel.example.svelte";
 
 export default {
   title: "Component/Carousel",
@@ -7,6 +8,6 @@ export default {
 };
 
 export const Default = () => ({
-  Component: Carousel,
+  Component: CarouselExample,
   props: {},
 });
